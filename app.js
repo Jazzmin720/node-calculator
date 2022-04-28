@@ -4,6 +4,7 @@ const subtract = "-";
 const multiply = "*";
 const divide = "/";
 
+
 function getCalc (){
     let getOperation = readlineSync.question('What operation would you like to perform? (* , / , + , -)' )
     if(getOperation == add){
@@ -15,13 +16,13 @@ function getCalc (){
                 }else if(isNaN(secondNum)){
                     do{
                         console.log('That is not a valid number.')
-                        readlineSync.question('Please enter the second number.');
+                        secondNum = readlineSync.question('Please enter the second number.');
                     }while(isNaN(secondNum))
                 }
         }else if(isNaN(firstNum)){
             do{
                 console.log('That is not a valid number.')
-                readlineSync.question('Please enter the first number.')
+                firstNum = readlineSync.question('Please enter the first number.')
             }while(isNaN(firstNum));
         }
     }else if(getOperation == subtract){
@@ -33,13 +34,13 @@ function getCalc (){
             }else if(isNaN(secondNum)){
                 do{
                     console.log('That is not a valid number.')
-                    readlineSync.question('Please enter the second number.')
+                   secondNum = readlineSync.question('Please enter the second number.')
                 }while(isNaN(secondNum));
             }
         }else if(isNaN(firstNum)){
             do{
                 console.log('That is not a valid number.')
-                readlineSync.question('Please enter the first number.')
+               firstNum = readlineSync.question('Please enter the first number.')
             }while(isNaN(firstNum));
         }
     }else if(getOperation == multiply){
@@ -51,13 +52,13 @@ function getCalc (){
             }else if(isNaN(secondNum)){
                 do{
                     console.log('That is not a valid number.')
-                    readlineSync.question('Please enter the second number.')
+                   secondNum =  readlineSync.question('Please enter the second number.')
                 }while(isNaN(secondNum));
             }
         }else if(isNaN(firstNum)){
             do{
                 console.log('That is not a valid number.')
-                readlineSync.question('Please enter the first number.')
+               firstNum =  readlineSync.question('Please enter the first number.')
             }while(isNaN(firstNum));
         }
             
@@ -70,17 +71,18 @@ function getCalc (){
             }else if(isNaN(secondNum)){
                 do{
                     console.log('That is not a valid number.')
-                    readlineSync.question('Please enter the second number.')
+                  secondNum =  readlineSync.question('Please enter the second number.')
                 }while(isNaN(secondNum));
             }
         }else if(isNaN(firstNum)){
             do{
                 console.log('That is not a valid number.')
-                readlineSync.question('Please enter the first number.')
+               firstNum = readlineSync.question('Please enter the first number.')
             }while(isNaN(firstNum));
         }
     }else(
         console.log('That is not a valid character. Refresh and try again.')
+        getOperation;
         )
         
     }
